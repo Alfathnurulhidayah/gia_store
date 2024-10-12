@@ -1,4 +1,4 @@
-import Profile.java.Profile;  // Ganti "com.mypackage" dengan nama paket di mana Profile disimpan.
+  // Ganti "com.mypackage" dengan nama paket di mana Profile disimpan.
 
 /*import path.to.Profile;
 
@@ -57,7 +57,7 @@ public class Home extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        lb_profil = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
@@ -88,8 +88,13 @@ public class Home extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Century Schoolbook", 0, 24)); // NOI18N
         jLabel3.setText("Produk");
 
-        jLabel4.setFont(new java.awt.Font("Century Schoolbook", 0, 24)); // NOI18N
-        jLabel4.setText("Profil");
+        lb_profil.setFont(new java.awt.Font("Century Schoolbook", 0, 24)); // NOI18N
+        lb_profil.setText("Profil");
+        lb_profil.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb_profilMouseClicked(evt);
+            }
+        });
 
         jLabel5.setFont(new java.awt.Font("Century Schoolbook", 0, 24)); // NOI18N
         jLabel5.setText("Home");
@@ -119,10 +124,10 @@ public class Home extends javax.swing.JFrame {
                 .addGap(90, 90, 90)
                 .addComponent(jLabel7)
                 .addGap(87, 87, 87)
-                .addComponent(jLabel4)
+                .addComponent(lb_profil)
                 .addGap(97, 97, 97)
                 .addComponent(jLabel17)
-                .addContainerGap(160, Short.MAX_VALUE))
+                .addContainerGap(100, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -134,7 +139,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(jLabel5)
                     .addComponent(jLabel6)
                     .addComponent(jLabel7)
-                    .addComponent(jLabel4)
+                    .addComponent(lb_profil)
                     .addComponent(jLabel17))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
@@ -202,40 +207,42 @@ public class Home extends javax.swing.JFrame {
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 482, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(29, 29, 29)
+                .addComponent(jLabel8)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel16)
-                    .addComponent(jLabel11)
                     .addComponent(jLabel10)
-                    .addComponent(jLabel12)
-                    .addComponent(jLabel13)
+                    .addComponent(jLabel15)
+                    .addComponent(jLabel16)
                     .addComponent(jLabel14)
-                    .addComponent(jLabel15))
-                .addContainerGap(146, Short.MAX_VALUE))
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel11))
+                .addContainerGap(39, Short.MAX_VALUE))
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(65, 65, 65)
                         .addComponent(jLabel10)
-                        .addGap(18, 18, 18)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel16)))
-                .addContainerGap(353, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(jLabel16))
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 396, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(346, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -260,10 +267,21 @@ public class Home extends javax.swing.JFrame {
      * @param args the command line arguments
      */
     
-    private void jbLogoutActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbLogoutActionPerformed
+    private void jbLogoutActionPerformed(java.awt.event.ActionEvent evt) {                                         
         // TODO add your handling code here:
         dispose();
-    }//GEN-LAST:event_jbLogoutActionPerformed
+    }                                        
+
+    private void lb_profilMouseClicked(java.awt.event.MouseEvent evt) {                                       
+        // TODO add your handling code here:
+        // Menutup form login (opsional jika login form ingin ditutup)
+            this.dispose();
+            
+            // Membuka form home
+            Profile pp = new Profile();
+            pp.setVisible(true);
+            
+    }                                      
 
      private void jbProfil1ActionPerformed(java.awt.event.ActionEvent evt) {
         // Navigasi ke halaman Profil
@@ -315,7 +333,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -325,6 +342,8 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lb_profil;
     // End of variables declaration                   
 
 }
+
