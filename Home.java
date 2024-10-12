@@ -61,7 +61,7 @@ public class Home extends javax.swing.JFrame {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
+        lb_logout = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
@@ -105,8 +105,13 @@ public class Home extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Century Schoolbook", 0, 24)); // NOI18N
         jLabel7.setText("Inventaris");
 
-        jLabel17.setFont(new java.awt.Font("Century Schoolbook", 0, 24)); // NOI18N
-        jLabel17.setText("Logout");
+        lb_logout.setFont(new java.awt.Font("Century Schoolbook", 0, 24)); // NOI18N
+        lb_logout.setText("Logout");
+        lb_logout.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                lb_logoutMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
@@ -126,7 +131,7 @@ public class Home extends javax.swing.JFrame {
                 .addGap(87, 87, 87)
                 .addComponent(lb_profil)
                 .addGap(97, 97, 97)
-                .addComponent(jLabel17)
+                .addComponent(lb_logout)
                 .addContainerGap(100, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -140,7 +145,7 @@ public class Home extends javax.swing.JFrame {
                     .addComponent(jLabel6)
                     .addComponent(jLabel7)
                     .addComponent(lb_profil)
-                    .addComponent(jLabel17))
+                    .addComponent(lb_logout))
                 .addContainerGap(22, Short.MAX_VALUE))
         );
 
@@ -283,6 +288,12 @@ public class Home extends javax.swing.JFrame {
             
     }                                      
 
+    private void lb_logoutMouseClicked(java.awt.event.MouseEvent evt) {                                       
+        // TODO add your handling code here:
+        new login().setVisible(true);
+        dispose();
+    }                                      
+
      private void jbProfil1ActionPerformed(java.awt.event.ActionEvent evt) {
         // Navigasi ke halaman Profil
         dispose();  // Men
@@ -330,7 +341,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
@@ -342,8 +352,8 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
+    private javax.swing.JLabel lb_logout;
     private javax.swing.JLabel lb_profil;
     // End of variables declaration                   
 
 }
-
